@@ -1,6 +1,7 @@
 #include "logic.h"
 
-bool is_power_of_four(int n) {
+// O(log n)
+bool is_power_of_four_iterative(int n) {
     if (n <= 0) {
         return false;
     }
@@ -8,10 +9,11 @@ bool is_power_of_four(int n) {
     while (n % 4 == 0) {
         n /= 4;
     }
-    return recursive(n);
+    return n == 1;
 }
 
-bool recursive(int n) {
+// O(log n)
+bool is_power_of_four_recursive(int n) {
     if (n <= 0) {
         return false;
     }
@@ -21,7 +23,7 @@ bool recursive(int n) {
     }
 
     if (n % 4 == 0) {
-        return recursive(n / 4);
+        return is_power_of_four_recursive(n / 4);
     }
     else {
         return false;

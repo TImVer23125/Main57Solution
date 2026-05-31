@@ -5,7 +5,8 @@ int main() {
     cout << "Enter an integer number: ";
     cin >> n;
 
-    cout << "Is it number is power of four?\n" << (is_power_of_four(n) ? "Yes." : "No.") << endl;
+    cout << "Iterative: " << (is_power_of_four_iterative(n) ? "Yes" : "No") << endl;
+    cout << "Recursive: " << (is_power_of_four_recursive(n) ? "Yes" : "No") << endl;
 
     return 0;
 }
